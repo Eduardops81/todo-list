@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main-container">
+        <form class="create-task-container">
+            <div class="create-task-field">
+                <label>Título</label>
+                <input class="task-input" type="text" name="title"/>
+            </div>
+
+            <div class="create-task-field">
+                <label>Prazo</label>
+                <input class="task-input" type="date" name="due-date"/>
+            </div>
+
+            <button class="send-task-button" type="submit">CRIAR TAREFA</button>
+        </form>
+
+        <div class="tasks-list-container">
+            <h3 class="tasks-list-title">TAREFAS</h2>
+            <div id="tasks-list"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
