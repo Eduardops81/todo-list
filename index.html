@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link href="./style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-container">
         <form class="create-task-container">
             <div class="create-task-field">
                 <label>Título</label>
-                <input class="task-input" type="text" name="title"/>
+                <input class="task-input" type="text" name="title" required/>
             </div>
 
             <div class="create-task-field">
                 <label>Prazo</label>
-                <input class="task-input" type="date" name="due-date"/>
+                <input class="task-input" type="date" name="due-date" required/>
             </div>
 
             <button class="send-task-button" type="submit">CRIAR TAREFA</button>
