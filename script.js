@@ -28,10 +28,16 @@ function listTasks() {
 
     tasksList.forEach((task, index) => {
         const taskItem = document.createElement("div");
-        taskItem.className = "task-list-items";
+        taskItem.classList.add(
+            "task-list-items",
+            task.status == "Concluído" ? "completed" : null,
+        );
 
         const title = document.createElement("p");
-        title.className = "task-title";
+        title.classList.add(
+            "task-title",
+            task.status == "Concluído" ? "completed" : null,
+        );
         title.textContent = task.title;
 
         const dueDate = document.createElement("p");
@@ -54,30 +60,23 @@ function listTasks() {
         deleteButton.textContent = "Remover";
         deleteButton.onclick = () => deleteTask(index);
 
-        const firstLine = document.createElement("div");
-        firstLine.className = "task-first-line"
-        firstLine.append(
-            title,
-            dueDate,
-        );
-
-        const secondLineSecondColumn = document.createElement("div");
-        secondLineSecondColumn.className = "task-second-line-second-column";
-        secondLineSecondColumn.append(
+        const buttonsContainer = document.createElement("div");
+        buttonsContainer.className = "task-buttons-container";
+        buttonsContainer.append(
             task.status !== "Concluído" ? completeButton : "",
             deleteButton,
-        );
+        )
 
-        const secondLine = document.createElement("div");
-        secondLine.className = "task-second-line";
-        secondLine.append(
-            status,
-            secondLineSecondColumn,
-        );
+        const buttonsAndDueDateContainer = document.createElement("div");
+        buttonsAndDueDateContainer.className = "task-buttons-and-due-date-container";
+        buttonsAndDueDateContainer.append(
+            dueDate,
+            buttonsContainer,
+        )
 
         taskItem.append(
-            firstLine,
-            secondLine,
+            title,
+            buttonsAndDueDateContainer,
         )
 
         tasksListElement.appendChild(taskItem);

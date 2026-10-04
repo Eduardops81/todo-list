@@ -16,7 +16,7 @@
 
 .create-task-container {
     background-color: #fff;
-    width: 400px;
+    width: 600px;
     border: 1px solid #e4e3e3;
     border-radius: 10px;
     padding: 10px;
@@ -34,7 +34,7 @@
 
 .tasks-list-container {
     background-color: #fff;
-    width: 400px;
+    width: 600px;
     border: 1px solid #e4e3e3;
     border-radius: 10px;
     padding: 10px;
@@ -53,9 +53,14 @@
     background-color: rgb(0, 132, 255);
     border: none;
     color: white;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 2px 4px;
     cursor: pointer;
+}
+
+.send-task-button:hover {
+    background-color: rgb(143, 201, 255);
+    color: black;
 }
 
 #tasks-list {
@@ -69,32 +74,24 @@
     border-radius: 10px;
     padding: 5px;
     word-break: break-all;
-}
-
-.task-first-line {
-    display: flex;
-    justify-content: space-between;
-}
-
-.task-second-line {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.task-second-line-second-column {
-    display: flex;
-    gap: 5px;
-}
-
-.tasks-list-title {
-    margin-bottom: 10px;
+.task-list-items.completed {
+    background-color: rgb(202, 255, 202);
+    border-color: green;
 }
 
 .task-title {
-    width: 300px;
+    width: 250px;
     font-weight: 600;
     font-size: 14px;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
 }
 
 .task-due-date {
@@ -119,21 +116,41 @@
     font-size: 12px;
 }
 
+.task-buttons-container {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons-and-due-date-container {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .task-delete-button {
     background-color: red;
     border: none;
     color: white;
-    border-radius: 8px;
-    padding: 2px 4px;
+    border-radius: 4px;
+    padding: 2px 6px;
     cursor: pointer;
 }
 
+.task-delete-button:hover {
+    background-color: rgb(255, 158, 158);
+    color: black;
+}
 
 .task-complete-button {
     background-color: rgb(0, 132, 255);
     border: none;
     color: white;
-    border-radius: 8px;
-    padding: 2px 4px;
+    border-radius: 4px;
+    padding: 2px 6px;
     cursor: pointer;
+}
+
+.task-complete-button:hover {
+    background-color: rgb(143, 201, 255);
+    color: black;
 }
