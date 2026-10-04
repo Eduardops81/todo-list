@@ -98,6 +98,14 @@
     font-size: 12px;
 }
 
+.task-due-date.completed {
+    text-decoration: line-through;
+}
+
+.task-due-date.overdue {
+    color: red;
+}
+
 .task-status {
     background-color: rgb(255, 248, 185);
     color: #ff9129;
